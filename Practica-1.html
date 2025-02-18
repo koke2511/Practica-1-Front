@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Jorge Ferrero de Lara</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .text {
+            flex: 1;
+        }
+
+        .text h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .text p {
+            font-size: 1rem;
+        }
+
+        .imagen {
+            margin-left: 20px;
+            max-width: 150px;
+            border-radius: 10px;
+        }
+
+        .iconos {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            align-items: center;
+        }
+
+        .iconos a img {
+            width: 30px;
+        }
+
+        .Secciones {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .fecha {
+            display: block;
+            text-align: right;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="text">
+            <h1>Jorge Ferrero de Lara</h1>
+            <p><strong>Pentester | DevSecOps | OWASP | Back-End Developer</strong></p>
+            <p>📍 Comunidad de Madrid, España</p>
+            <div class="iconos">
+                <a href="https://www.linkedin.com/in/jorge-ferrero-de-lara-441ba3194/" target="_blank">
+                    <img src="Linkedin.png" alt="Imagen Linkedin">
+                </a>
+                <a href="https://github.com/koke2511" target="_blank">
+                    <img src="Github.jpg" alt="Imagen Github">
+                </a>
+                <a href="mailto:j.d.ferrero@hotmail.com">
+                    <img src="Correo.png" alt="Imagen Correo">
+                </a>
+            </div>
+        </div>
+        <img src="Koke imagen.png" alt="Imagen perfil" class="imagen">
+    </div>
+
+    <div class="Secciones">
+        <h2><strong>Sobre mí.</strong></h2>
+        <p>Soy un profesional con experiencia en seguridad informática y desarrollo back-end. Me apasiona la ciberseguridad, el pentesting y la mejora continua de sistemas.</p>
+    </div>
+
+    <div class="Secciones">
+        <h2><strong>Experiencia laboral.</strong></h2>
+        <div>
+            <p><strong>Deloitte</strong> <span class="fecha">2019-2020</span></p>
+            <p>Trabajando como becario de ciberseguridad en análisis de malware.</p>
+        </div>
+        <div>
+            <p><strong>Mercadona</strong> <span class="fecha">2021-2022</span></p>
+            <p>Cajero-reponedor.</p>
+        </div>
+        <div>
+            <p><strong>Forvis</strong> <span class="fecha">2022-Actualidad</span></p>
+            <p>Auditoría de penetración en aplicaciones web.</p>
+        </div>
+    </div>
+
+    <div class="Secciones">
+        <div class="section-header">
+            <h2><strong>Formación</strong></h2>
+            <button id="mostrarFormacionBtn">Mostrar más</button>
+        </div>
+        
+        <p id="formacionActual" class="hidden">
+            <strong>Universidad de Nebrija</strong><br>
+            Ingeniería Informática
+        </p>
+    </div>
+
+    <script>
+        const mostrarFormacionBtn = document.getElementById('mostrarFormacionBtn');
+        const formacionActual = document.getElementById('formacionActual');
+
+        mostrarFormacionBtn.addEventListener('click', () => {
+            if (formacionActual.classList.contains('hidden')) {
+                formacionActual.classList.remove('hidden');
+                mostrarFormacionBtn.textContent = 'Mostrar menos';
+            } else {
+                formacionActual.classList.add('hidden');
+                mostrarFormacionBtn.textContent = 'Mostrar más';
+            }
+        });
+    </script>
+
+</body>
+</html>
