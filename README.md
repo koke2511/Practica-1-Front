@@ -1,7 +1,5 @@
 # React + TypeScript + Vite
 ## COMANDOS PARA EJECUTAR EL PROGRAMA: 
-  - node -v  
-  - npm -v  
 ## Intalar Node.js  
   - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash  
   - source ~/.bashrc  
