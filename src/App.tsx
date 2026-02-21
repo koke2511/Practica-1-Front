@@ -37,7 +37,7 @@ const App =() => {
   }, [])
 
   return (
-    <div>
+    <div className="app">
       <h1>Star Wars</h1>
       {load && <p>Loading...</p>}
       {error && <Error message={error} />}

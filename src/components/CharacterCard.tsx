@@ -4,15 +4,15 @@ const CharacterCard = (params: { character: Character }) => {
     const character = params.character;
 
     return (
-        <div>
-            <h3>{character.name}</h3>
-            <p>Height: {character.height}</p>
-            <p>Mass: {character.mass}</p>
-            <p>Hair: {character.hair_color}</p>
-            <p>Skin: {character.skin_color}</p>
-            <p>Eyes: {character.eye_color}</p>
-            <p>Birth Year: {character.birth_year}</p>
-            <p>Gender: {character.gender}</p>
+        <div className="charactercard">
+            <h3><strong>{character.name}</strong></h3>
+            <p><strong>Height: {character.height}</strong></p>
+            <p><strong>Mass: {character.mass}</strong></p>
+            <p><strong>Hair: {character.hair_color}</strong></p>
+            <p><strong>Skin: {character.skin_color}</strong></p>
+            <p><strong>Eyes: {character.eye_color}</strong></p>
+            <p><strong>Birth Year: {character.birth_year}</strong></p>
+            <p><strong>Gender: {character.gender}</strong></p>
         </div>
     )
 };

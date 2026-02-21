@@ -4,7 +4,7 @@ import CharacterCard from "./CharacterCard.tsx"
 const CharacterList = ( params :{ character: Character[]}) => {
     const character = params.character
     return (
-        <div>
+        <div className="characterlist">
             {character.map((char) => (
                 <CharacterCard key = {char.name} character = {char} />
             ))}
